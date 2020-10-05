@@ -143,6 +143,25 @@ public:
 	}
 };
 
+class MM_UserSpecifiedParameterDouble {
+	/* Data Members */
+private:
+protected:
+public:
+	bool _wasSpecified; /**< True if this parameter was specified by the user, false means it is undefined */
+	double _valueSpecified; /**< The value specified by the user or undefined in _wasSpecified is false */
+
+	/* Member Functions */
+private:
+protected:
+public:
+	MM_UserSpecifiedParameterDouble()
+		: _wasSpecified(false)
+		, _valueSpecified(0.0)
+	{
+	}
+};
+
 class MM_UserSpecifiedParameterBool {
 	/* Data Members */
 private:
@@ -505,8 +524,8 @@ public:
 	bool dynamicNewSpaceSizing;
 	bool debugDynamicNewSpaceSizing;
 	bool dnssAvoidMovingObjects;
-	double dnssExpectedTimeRatioMinimum;
-	double dnssExpectedTimeRatioMaximum;
+	MM_UserSpecifiedParameterDouble dnssExpectedTimeRatioMinimum;
+	MM_UserSpecifiedParameterDouble dnssExpectedTimeRatioMaximum;
 	double dnssWeightedTimeRatioFactorIncreaseSmall;
 	double dnssWeightedTimeRatioFactorIncreaseMedium;
 	double dnssWeightedTimeRatioFactorIncreaseLarge;
@@ -1600,8 +1619,8 @@ public:
 		, dynamicNewSpaceSizing(true)
 		, debugDynamicNewSpaceSizing(false)
 		, dnssAvoidMovingObjects(true)
-		, dnssExpectedTimeRatioMinimum(0.01)
-		, dnssExpectedTimeRatioMaximum(0.05)
+		, dnssExpectedTimeRatioMinimum()
+		, dnssExpectedTimeRatioMaximum()
 		, dnssWeightedTimeRatioFactorIncreaseSmall(0.2)
 		, dnssWeightedTimeRatioFactorIncreaseMedium(0.35)
 		, dnssWeightedTimeRatioFactorIncreaseLarge(0.5)

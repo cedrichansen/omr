@@ -76,6 +76,26 @@ MM_ConfigurationGenerational::tearDown(MM_EnvironmentBase* env)
 	MM_ConfigurationStandard::tearDown(env);
 }
 
+bool
+MM_ConfigurationGenerational::initialize(MM_EnvironmentBase* env)
+{
+	MM_GCExtensionsBase* extensions = env->getExtensions();
+
+	#define DEFAULT_LOCAL_GC_TIME_RATIO_FOR_NURSERY_EXPAND		0.05
+	#define DEFAULT_LOCAL_GC_TIME_RATIO_FOR_NURSERY_CONTRACT	0.01
+
+	if (!extensions->dnssExpectedTimeRatioMaximum._wasSpecified) {
+		extensions->dnssExpectedTimeRatioMaximum._valueSpecified = DEFAULT_LOCAL_GC_TIME_RATIO_FOR_NURSERY_EXPAND;
+	}
+
+	if (!extensions->dnssExpectedTimeRatioMinimum._wasSpecified) {
+		extensions->dnssExpectedTimeRatioMinimum._valueSpecified = DEFAULT_LOCAL_GC_TIME_RATIO_FOR_NURSERY_CONTRACT;
+	}
+
+	bool result = MM_ConfigurationStandard::initialize(env);
+	return result;
+}
+
 MM_MemorySubSpaceSemiSpace *
 MM_ConfigurationGenerational::createSemiSpace(MM_EnvironmentBase *envBase, MM_Heap *heap, MM_Scavenger *scavenger, MM_InitializationParameters *parameters, UDATA numaNode)
 {
