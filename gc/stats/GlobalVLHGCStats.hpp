@@ -42,10 +42,12 @@ class MM_GlobalVLHGCStats
 public:
 	uintptr_t gcCount;  /**< Count of the number of GC cycles that have occurred */
 	uintptr_t incrementCount;	/**< The number of incremental taxation entry point collection operations which have been completed since the VM started */
+	double relativePgcFrequency; /**< The percentage of GC's which are PGC's vs GMPs, between 0 - 1. 0.9 means that 90% of GC's are PGC's */
 
 	MM_GlobalVLHGCStats() :
 		gcCount(0)
 		,incrementCount(0)
+		,relativePgcFrequency(0.9)
 	{};
 };
 

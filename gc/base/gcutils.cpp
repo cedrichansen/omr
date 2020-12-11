@@ -182,12 +182,16 @@ getContractReasonAsString(ContractReason reason)
 		return "insufficient time being spent in gc";
 	case FREE_SPACE_GREATER_MAXF:
 		return "excess free space following gc";
+	case FREE_SPACE_HIGH_AND_GC_TOO_LOW:
+		return "insufficient time spent in gc, and excess of free space";
 	case SCAV_RATIO_TOO_LOW:
 		return "insufficient time being spent scavenging";
 	case SATISFY_EXPAND:
 		return "enable expansion";
 	case HEAP_RESIZE:
 		return "heap reconfiguration";
+	case SATISFY_SOFT_MX:
+		return "satisfy soft max heap size";	
 	case FORCED_NURSERY_CONTRACT:
 		return "forced nursery contract";
 	default:
@@ -209,6 +213,8 @@ getExpandReasonAsString(ExpandReason reason)
 		return "insufficient free space following gc";
 	case SCAV_RATIO_TOO_HIGH:
 		return "excessive time being spent scavenging";
+	case GC_HIGH_SPACE_LOW:
+		return "space too low and gc ratio too high";	
 	case SATISFY_COLLECTOR:
 		return "continue current collection";
 	case EXPAND_DESPERATE:
