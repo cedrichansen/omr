@@ -806,6 +806,7 @@ public:
 	};
 	ReserveRegions tarokReserveRegionsFromCollectionSet;
 	bool tarokEnableRecoverRegionTailsAfterSweep; /**< Enable recovering region tail during post sweep of GMP */
+	uintptr_t tarokTargetMaxPauseTime; /**< An optional, user specified soft max pause time for PGC's in balanced GC*/
 #if defined(OMR_GC_VLHGC_CONCURRENT_COPY_FORWARD)
 	bool _isConcurrentCopyForward;
 #endif
@@ -1831,6 +1832,7 @@ public:
 		, tarokEnableCopyForwardHybrid(true)
 		, tarokReserveRegionsFromCollectionSet(RESERVE_REGIONS_NO)
 		, tarokEnableRecoverRegionTailsAfterSweep(false)
+		, tarokTargetMaxPauseTime(200)
 #if defined(OMR_GC_VLHGC_CONCURRENT_COPY_FORWARD)
 		, _isConcurrentCopyForward(false)
 #endif /* defined(OMR_GC_VLHGC_CONCURRENT_COPY_FORWARD) */
