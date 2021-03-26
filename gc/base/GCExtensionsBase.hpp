@@ -391,8 +391,8 @@ public:
 	uintptr_t heapFreeMinimumRatioMultiplier;
 	uintptr_t heapFreeMaximumRatioDivisor;
 	uintptr_t heapFreeMaximumRatioMultiplier;
-	uintptr_t heapExpansionGCTimeThreshold; /**< max percentage of time spent in gc before expansion */
-	uintptr_t heapContractionGCTimeThreshold; /**< min percentage of time spent in gc before contraction */
+	MM_UserSpecifiedParameterUDATA heapExpansionGCTimeThreshold; /**< max percentage of time spent in gc before expansion */
+	MM_UserSpecifiedParameterUDATA heapContractionGCTimeThreshold; /**< min percentage of time spent in gc before contraction */
 	uintptr_t heapExpansionStabilizationCount; /**< GC count required before the heap is allowed to expand due to excessvie time after last heap expansion */
 	uintptr_t heapContractionStabilizationCount; /**< GC count required before the heap is allowed to contract due to excessvie time after last heap expansion */
 
@@ -1506,8 +1506,8 @@ public:
 		, heapFreeMinimumRatioMultiplier(30)
 		, heapFreeMaximumRatioDivisor(100)
 		, heapFreeMaximumRatioMultiplier(60)
-		, heapExpansionGCTimeThreshold(13)
-		, heapContractionGCTimeThreshold(5)
+		, heapExpansionGCTimeThreshold()
+		, heapContractionGCTimeThreshold()
 		, heapExpansionStabilizationCount(0)
 		, heapContractionStabilizationCount(3)
 		, heapSizeStartupHintConservativeFactor((float)0.7)
