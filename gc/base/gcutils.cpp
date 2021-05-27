@@ -184,6 +184,8 @@ getContractReasonAsString(ContractReason reason)
 		return "excess free space following gc";
 	case FREE_SPACE_HIGH_OR_GC_LOW:
 		return "insufficient time spent in gc, or excess of free space";
+	case EDEN_CONTRACTING:
+		return "eden contracting";	
 	case SCAV_RATIO_TOO_LOW:
 		return "insufficient time being spent scavenging";
 	case SATISFY_EXPAND:
@@ -215,6 +217,8 @@ getExpandReasonAsString(ExpandReason reason)
 		return "excessive time being spent scavenging";
 	case FREE_SPACE_LOW_OR_GC_HIGH:
 		return "Free space too low or gc ratio too high";	
+	case EDEN_EXPANDING:
+		return "eden expanding";
 	case SATISFY_COLLECTOR:
 		return "continue current collection";
 	case EXPAND_DESPERATE:
