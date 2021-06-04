@@ -60,7 +60,7 @@ public:
 			gmpTime(0),
 			avgPgcTimeUs(0),
 			avgPgcIntervalUs(0),
-			pgcCountSinceGMPEnd(0),
+			pgcCountSinceGMPEnd(1),
 			reservedSize(0),
 			freeTenure(0),
 			edenRegionChange(0)
@@ -81,7 +81,7 @@ public:
 	MM_GlobalVLHGCStats() :
 		gcCount(0)
 		,incrementCount(0)
-		,_previousPgcPerGmpCount(0)
+		,_previousPgcPerGmpCount(1)
 		,_heapSizingData()
 	{};
 };
