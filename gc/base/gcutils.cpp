@@ -216,7 +216,7 @@ getExpandReasonAsString(ExpandReason reason)
 	case SCAV_RATIO_TOO_HIGH:
 		return "excessive time being spent scavenging";
 	case FREE_SPACE_LOW_OR_GC_HIGH:
-		return "Free space too low or gc ratio too high";	
+		return "free space too low or gc ratio too high";	
 	case EDEN_EXPANDING:
 		return "eden expanding";
 	case SATISFY_COLLECTOR:
