@@ -1029,7 +1029,13 @@ MM_VerboseHandlerOutput::outputCollectorHeapResizeInfo(MM_EnvironmentBase *env, 
 const char *
 MM_VerboseHandlerOutput::getSubSpaceType(uintptr_t typeFlags)
 {
-	return "default";
+	const char *subSpaceType = NULL;
+	if (MEMORY_TYPE_NEW == typeFlags) {
+		subSpaceType = "eden";
+	} else {
+		subSpaceType = "total heap";
+	}
+	return subSpaceType;
 }
 
 void
