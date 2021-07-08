@@ -946,7 +946,7 @@ TraceExit=Trc_MM_MemorySubSpaceTarok_calculateExpandSize_Exit1 Overhead=1 Level=
 TraceEvent=Trc_MM_MemorySubSpaceTarok_calculateHybridHeapOverhead Overhead=1 Level=1 Group=resize Template="MM_MemorySubSpaceTarok_calculateHybridHeapOverhead GC componant = %f Memory Componant = %f"
 TraceEvent=Trc_MM_MemorySubSpaceTarok_getHeapSizeWithinBounds_1 Overhead=1 Level=1 Group=resize Template="MM_MemorySubSpaceTarok_getHeapSizeWithinBounds Better heap size = %zu hybrid overhead %f"
 TraceEvent=Trc_MM_MemorySubSpaceTarok_getHeapSizeWithinBounds_2 Overhead=1 Level=1 Group=resize Template="MM_MemorySubSpaceTarok_getHeapSizeWithinBounds Changing heap by %f percent"
-TraceEvent=Trc_MM_MemorySubSpaceTarok_checkResize_1 Overhead=1 Level=1 Group=resize Template="MM_MemorySubSpaceTarok_checkResize _searchingForMaxFreeMemAfterGmp %s _foundMaxFreeMemAfterGMP %s"
+TraceEvent=Trc_MM_MemorySubSpaceTarok_checkResize_1 Overhead=1 Level=1 Group=resize Template="MM_MemorySubSpaceTarok_checkResize ready to resize ? %s"
 TraceEvent=Trc_MM_MemorySubSpaceTarok_checkResize_2 Overhead=1 Level=1 Group=resize Template="MM_MemorySubSpaceTarok_checkResize heapSizeChange %zd bytes edenChangeRegionsBytes %zd"
 
 
