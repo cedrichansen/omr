@@ -948,6 +948,9 @@ TraceEvent=Trc_MM_MemorySubSpaceTarok_getHeapSizeWithinBounds_1 Overhead=1 Level
 TraceEvent=Trc_MM_MemorySubSpaceTarok_getHeapSizeWithinBounds_2 Overhead=1 Level=1 Group=resize Template="MM_MemorySubSpaceTarok_getHeapSizeWithinBounds Changing heap by %f percent"
 TraceEvent=Trc_MM_MemorySubSpaceTarok_checkResize_1 Overhead=1 Level=1 Group=resize Template="MM_MemorySubSpaceTarok_checkResize ready to resize ? %s"
 TraceEvent=Trc_MM_MemorySubSpaceTarok_checkResize_2 Overhead=1 Level=1 Group=resize Template="MM_MemorySubSpaceTarok_checkResize heapSizeChange %zd bytes edenChangeRegionsBytes %zd"
+TraceEvent=Trc_MM_MemorySubSpaceTarok_mapMemoryPercentageToGcOverhead_1 Overhead=1 Level=1 Group=resize Template="MM_MemorySubSpaceTarok_mapMemoryPercentageToGcOverhead Tenure: %zu bytes, Free Tenure %zu bytes"
+TraceEvent=Trc_MM_MemorySubSpaceTarok_mapMemoryPercentageToGcOverhead_2 Overhead=1 Level=1 Group=resize Template="MM_MemorySubSpaceTarok_mapMemoryPercentageToGcOverhead heapSizeChange %zd bytes, free tenure ratio %f"
+TraceEvent=Trc_MM_MemorySubSpaceTarok_mapMemoryPercentageToGcOverhead_3 Overhead=1 Level=1 Group=resize Template="MM_MemorySubSpaceTarok_mapMemoryPercentageToGcOverhead free memory mapped to gc overhead: %f"
 
 
 TraceEvent=Trc_MM_SchedulingDelegate_calculateGlobalMarkOverhead Overhead=1 Level=1 Group=resize Template="MM_SchedulingDelegate_calculateGlobalMarkOverhead GMP Overhead = %f Increments total time = %zu Concurrent cost = %zu Interval time = %zu"

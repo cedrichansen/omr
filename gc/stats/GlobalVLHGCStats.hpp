@@ -55,7 +55,7 @@ public:
 		uint64_t reservedSize;
 		uint64_t freeTenure;
 		intptr_t edenRegionChange;
-		bool readyToResize;
+		bool readyToResizeAtGlobalEnd;
 
 		MM_HeapSizingData() :
 			gmpTime(0),
@@ -65,7 +65,7 @@ public:
 			reservedSize(0),
 			freeTenure(0),
 			edenRegionChange(0), 
-			readyToResize(true)
+			readyToResizeAtGlobalEnd(true)
 		{
 		}
 	} _heapSizingData; /**< A collection of data that is required by the total heap sizing logic */
