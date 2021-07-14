@@ -92,8 +92,7 @@ MM_ConfigurationGenerational::initialize(MM_EnvironmentBase* env)
 		extensions->dnssExpectedTimeRatioMinimum._valueSpecified = DEFAULT_LOCAL_GC_TIME_RATIO_FOR_NURSERY_CONTRACT;
 	}
 
-	bool result = MM_ConfigurationStandard::initialize(env);
-	return result;
+	return MM_ConfigurationStandard::initialize(env);
 }
 
 MM_MemorySubSpaceSemiSpace *
