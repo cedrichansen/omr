@@ -524,8 +524,8 @@ public:
 	bool dynamicNewSpaceSizing;
 	bool debugDynamicNewSpaceSizing;
 	bool dnssAvoidMovingObjects;
-	MM_UserSpecifiedParameterDouble dnssExpectedTimeRatioMinimum;
-	MM_UserSpecifiedParameterDouble dnssExpectedTimeRatioMaximum;
+	MM_UserSpecifiedParameterDouble dnssExpectedTimeRatioMinimum; /**< When the gc ratio for new/nursery space is below this value, new/nursery space should contract */
+	MM_UserSpecifiedParameterDouble dnssExpectedTimeRatioMaximum; /**< When the gc ratio for new/nursery space is above this value, new/nursery space should expand */
 	double dnssWeightedTimeRatioFactorIncreaseSmall;
 	double dnssWeightedTimeRatioFactorIncreaseMedium;
 	double dnssWeightedTimeRatioFactorIncreaseLarge;

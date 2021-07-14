@@ -81,15 +81,12 @@ MM_ConfigurationGenerational::initialize(MM_EnvironmentBase* env)
 {
 	MM_GCExtensionsBase* extensions = env->getExtensions();
 
-	#define DEFAULT_LOCAL_GC_TIME_RATIO_FOR_NURSERY_EXPAND		0.05
-	#define DEFAULT_LOCAL_GC_TIME_RATIO_FOR_NURSERY_CONTRACT	0.01
-
 	if (!extensions->dnssExpectedTimeRatioMaximum._wasSpecified) {
-		extensions->dnssExpectedTimeRatioMaximum._valueSpecified = DEFAULT_LOCAL_GC_TIME_RATIO_FOR_NURSERY_EXPAND;
+		extensions->dnssExpectedTimeRatioMaximum._valueSpecified = 0.05;
 	}
 
 	if (!extensions->dnssExpectedTimeRatioMinimum._wasSpecified) {
-		extensions->dnssExpectedTimeRatioMinimum._valueSpecified = DEFAULT_LOCAL_GC_TIME_RATIO_FOR_NURSERY_CONTRACT;
+		extensions->dnssExpectedTimeRatioMinimum._valueSpecified = 0.01;
 	}
 
 	return MM_ConfigurationStandard::initialize(env);
