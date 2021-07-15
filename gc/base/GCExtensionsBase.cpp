@@ -133,9 +133,6 @@ MM_GCExtensionsBase::initialize(MM_EnvironmentBase* env)
 	heapExpansionGCRatioThreshold._valueSpecified = 13;
 	heapContractionGCRatioThreshold._valueSpecified = 5;
 
-	heapExpansionGCTimeThreshold = 13; //To be removed
-	heapContractionGCTimeThreshold = 5; //To be removed
-
 #define SIXTY_FOUR_KB	((uintptr_t)64 * 1024)
 #define ONE_MB			((uintptr_t)1 * 1024 * 1024)
 #define TWO_MB			((uintptr_t)2 * 1024 * 1024)

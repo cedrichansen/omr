@@ -943,7 +943,7 @@ TraceEntry=Trc_MM_AllocationContextBalanced_acquireMPAOLRegionFromNode_Entry Ove
 TraceExit=Trc_MM_AllocationContextBalanced_acquireMPAOLRegionFromNode_Exit Overhead=1 Level=1 Group=tarok Template="MM_AllocationContextBalanced::acquireMPAOLRegionFromNode result=%p"
 TraceEntry=Trc_MM_MemorySubSpaceTarok_calculateTargetContractSize_Entry2 Overhead=1 Level=1 Group=resize Template="MM_MemorySubSpaceTarok_calculateTargetContractSize Entry Allocation size = %zu"
 TraceExit=Trc_MM_MemorySubSpaceTarok_calculateExpandSize_Exit2 Overhead=1 Level=1 Group=resize Template="MM_MemorySubSpaceTarok_calculateExpandSize Exit1 returning expand size of %zu bytes"
-TraceEvent=Trc_MM_MemorySubSpaceTarok_calculateHybridHeapOverhead Overhead=1 Level=1 Group=resize Template="MM_MemorySubSpaceTarok_calculateHybridHeapOverhead GC componant = %f Memory Componant = %f"
+TraceEvent=Trc_MM_MemorySubSpaceTarok_calculateHybridHeapOverhead Overhead=1 Level=1 Group=resize Template="MM_MemorySubSpaceTarok_calculateHybridHeapOverhead GC Componant = %f Memory Componant = %f"
 TraceEvent=Trc_MM_MemorySubSpaceTarok_getHeapSizeWithinBounds_1 Overhead=1 Level=1 Group=resize Template="MM_MemorySubSpaceTarok_getHeapSizeWithinBounds Better heap size = %zu hybrid overhead %f"
 TraceEvent=Trc_MM_MemorySubSpaceTarok_getHeapSizeWithinBounds_2 Overhead=1 Level=1 Group=resize Template="MM_MemorySubSpaceTarok_getHeapSizeWithinBounds Changing heap by %f percent"
 TraceEvent=Trc_MM_MemorySubSpaceTarok_checkResize_1 Overhead=1 Level=1 Group=resize Template="MM_MemorySubSpaceTarok_checkResize ready to resize ? %s"
