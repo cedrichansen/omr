@@ -82,11 +82,11 @@ MM_ConfigurationGenerational::initialize(MM_EnvironmentBase* env)
 	MM_GCExtensionsBase* extensions = env->getExtensions();
 
 	if (!extensions->dnssExpectedRatioMaximum._wasSpecified) {
-		extensions->dnssExpectedRatioMaximum._valueSpecified = 0.05;
+		extensions->dnssExpectedRatioMaximum._valueSpecified = extensions->dnssExpectedTimeRatioMaximum;
 	}
 
 	if (!extensions->dnssExpectedRatioMinimum._wasSpecified) {
-		extensions->dnssExpectedRatioMinimum._valueSpecified = 0.01;
+		extensions->dnssExpectedRatioMinimum._valueSpecified = extensions->dnssExpectedTimeRatioMinimum;
 	}
 
 	return MM_ConfigurationStandard::initialize(env);
